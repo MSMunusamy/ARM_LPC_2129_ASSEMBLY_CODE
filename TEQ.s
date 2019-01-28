@@ -16,12 +16,12 @@ COPY
 		
 		STR R3,[R2],#4  			;If both R3,R4 values equal store to R2 register. 
 		SUBS R5,#1				;Subtraction each time, R5 had 3 cycle each time it will be update.
-	        BNE COPY   				;COPY is call lable.
+		BNE COPY   				;COPY is call lable.
 FORWARD 
-L               B    L          			;Infinite loop.
+L              B    L          			        ;Infinite loop.
 		         	
-ARR_1           DCD 0X11,0X22,0X33
-ARR_2	        DCD 0X11,0X22,0X33
-	        AREA SAMP1,DATA,READWRITE 	        ;It provide a read and write permission for under declared ARR_3 
+ARR_1          DCD 0X11,0X22,0X33
+ARR_2	       DCD 0X11,0X22,0X33
+	       AREA SAMP1,DATA,READWRITE 	        ;It provide a read and write permission for under declared ARR_3 
 ARR_3	DCD 0           			        ;Initilization for ARR_3 as a 0
-	        END                         
+	       END                         
